@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./assets/stylesheet.css" />
+    <!-- THE FOLLOWING LIBRARY HAS BEEN USED: THREEJS - https://threejs.org/ -->
+    <script
+			async
+			src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"
+		></script>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.143.0/build/three.module.js"
+				}
+			}
+		</script>
+		<script src="./assets/app.js" defer></script>
+		<title>VMA dev</title>
+	</head>
+	<body>
+    
+		<header>
+      <nav class="navDesktop">
+        <a class="navLogo" href="./index.html">
+          <p class="navLogoKey">V</p>
+          <p class="navLogoKey">M</p>
+          <p class="navLogoKey">A</p>
+        </a>
+        <ul class="navDesktopUl">
+					<li class="navDesktopLi"><a href="./index.html">Home</a></li>
+          <li class="navDesktopLi"><a class="navWork">Case Studies</a></li>
+					<li class="navDesktopLi"><a class="navWho">Who am I</a></li>
+					<li class="navDesktopLi"><a class="navContact">Contact</a></li>
+					<li class="navDesktopLi"><a href="./index.html">My Playground</a></li>
+				</ul>
+      </nav>
+      <nav class="navMobile">
+        <a class="navLogo" href="./index.html">
+          <p class="navLogoKey">V</p>
+          <p class="navLogoKey">M</p>
+          <p class="navLogoKey">A</p>
+        </a>
+        <div class="navMobileBurgerMenu">
+          <div class="burgerMenuLine"></div>
+          <div class="burgerMenuLine bmline2"></div>
+          <div class="burgerMenuLine"></div>
+        </div>
+      </nav>
+      <div class="navActive">
+        <ul class="navActiveUl">
+          <li class="navActiveLi"><a href="./index.html">Home</a></li>
+          <li class="navActiveLi"><a href="#work">Case Studies</a></li>
+          <li class="navActiveLi"><a href="#who">Who am I</a></li>
+          <li class="navActiveLi"><a href="#contact">Contact</a></li>
+          <li class="navActiveLi"><a href="./index.html">My Playground</a></li>
+        </ul>
+        <div class="navSocials">
+            <a class="socialsAnchor" href="https://www.linkedin.com/in/mihai-alexandru-vistran-b2979a225/">
+              <img
+              src="./assets/images/linkedinBlack.svg"
+              alt="LinkedIn"
+              class="footerImg"
+              />
+            </a>
+            <a class="socialsAnchor" href="https://github.com/Xernaxe">
+              <img
+              src="./assets/images/githubBlack.svg"
+              alt="GitHub"
+              class="footerImg"
+              />
+            </a>
+            <a class="socialsAnchor" href="">
+              <img
+              src="./assets/images/twitterBlack.svg"
+              alt="Twitter"
+              class="footerImg"
+              />
+            </a>
+        </div>
+      </div>
+    </header>
+		<main>
+			<section class="hero" id="hero">
+        <div class="heroWrapper">
+
+				<div class="heroText">
+					<div class="heroTextWrapper">
+						<div class="heroHeaderWrapper">
+							<h1 class="heroHeader"></h1>
+							<div class="typingAnimation"></div>
+						</div>
+						<h2 class="heroSubHeader">Aspiring Front-End<br />Developer</h2>
+					</div>
+				</div>
+				<div class="canvasWrapper">
+					<script src="./assets/three.js" type="module"></script>
+				</div>
+      </div>
+      <div class="heroHelper">
+        <img
+          src="./assets/images/scroll1.svg"
+          alt="Scroll"
+          class="heroScroll"
+        />
+      </div>
+
+			</section>
+
+			<div class="spacing"></div>
+
+			<section class="work" id="work">
+				<div class="sectionHeaderWrapper">
+					<h3 class="sectionHeader sectionHeaderWork" id="work"></h3>
+				</div>
+				<div class="workCards">
+					<div class="workCard">
+						<div class="workCardTop">
+							<p class="cardHeader">Design Website</p>
+						</div>
+						<div class="workCardBody">
+							<p class="cardP workCardP">Fully integrated website for an Interior Designer, using
+                WordPress as a headless CMS.</p>
+
+							<div class="cardTextWrapper">
+								<div class="cardTech">
+									<p class="cardSubHeader">Tech Stack</p>
+									<ul class="cardUL">
+										<div class="cardLiCol">
+											<li class="cardLi">HTML</li>
+											<li class="cardLi">CSS</li>
+										</div>
+										<div class="cardLiCol">
+											<li class="cardLi">JavaScript</li>
+											<li class="cardLi">H-CMS</li>
+										</div>
+									</ul>
+								</div>
+
+								<div class="cardButtons">
+									<a class="cardButton" href="./tt.html">See more!</a>
+									<a class="cardButton">Demo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="workCard">
+						<div class="workCardTop">
+							<p class="cardHeader">To-Do App</p>
+						</div>
+						<div class="workCardBody">
+							<p class="cardP workCardP">The project is a task management app that uses authenthication. The purpose is to help users stay organized and manage tasks.</p>
+
+							<div class="cardTextWrapper">
+								<div class="cardTech">
+									<p class="cardSubHeader">Tech Stack</p>
+									<ul class="cardUL">
+										<div class="cardLiCol">
+											<li class="cardLi">SQL</li>
+											<li class="cardLi">HTML</li>
+											<li class="cardLi">CSS</li>
+										</div>
+										<div class="cardLiCol">
+											<li class="cardLi">JavaScript</li>
+											<li class="cardLi">Express</li>
+											<li class="cardLi">AWS</li>
+										</div>
+									</ul>
+								</div>
+
+								<div class="cardButtons">
+									<a class="cardButton" href="./todoapp.html">See more!</a>
+									<a class="cardButton">Demo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="workCard">
+						<div class="workCardTop">
+							<p class="cardHeader">Foodista</p>
+						</div>
+						<div class="workCardBody">
+							<p class="cardP workCardP">Foodista is a website where individuals may not only exchange tasty recipes but also get inspired by cooking one.</p>
+
+							<div class="cardTextWrapper">
+								<div class="cardTech">
+									<p class="cardSubHeader">Tech Stack</p>
+									<ul class="cardUL">
+										<div class="cardLiCol">
+											<li class="cardLi">HTML</li>
+											<li class="cardLi">CSS</li>
+										</div>
+										<div class="cardLiCol">
+											<li class="cardLi">JavaScript</li>
+											<li class="cardLi">H-CMS</li>
+										</div>
+									</ul>
+								</div>
+
+								<div class="cardButtons">
+									<a class="cardButton" href="./foodista.html">See more!</a>
+									<a class="cardButton" >Demo</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sectionHelper">
+					<img
+						src="./assets/images/scroll2.svg"
+						alt="Scroll"
+						class="heroScroll"
+					/>
+				</div>
+			</section>
+
+			<div class="spacing"></div>
+
+			<section class="who" id="who">
+				<div class="sectionHeaderWrapper">
+					<h3 class="sectionHeader sectionHeaderWho" id="who"></h3>
+				</div>
+				<div class="whoCards">
+					<div class="whoCard">
+						<div class="whoCardTop">
+							<p class="whoCardHeader">Hi I'm Alex.</p>
+						</div>
+						<div class="whoCardBody">
+							<div class="whoCardTextWrapper">
+								<ul class="whoCardUL">
+									<li class="whoCardLi">
+										- Student at UCN | Multimedia Design
+									</li>
+									<li class="whoCardLi">- I'm based in Aalborg, Denmark</li>
+									<li class="whoCardLi">- Programming enthusiast</li>
+									<li class="whoCardLi">- I like to experiment new concepts</li>
+									<li class="whoCardLi">- Able to work independently</li>
+									<li class="whoCardLi">- Team player</li>
+									<li class="whoCardLi">- Self-motivated</li>
+								</ul>
+							</div>
+              <div
+							class="whoCardTextWrapperClicked displayNone whoCardTextWrapperOpacity"
+						>
+							<p class="whoP whoPClicked">
+								&nbsp I am 20 years old, currently studying Multimedia
+								Design at UCN.<br />
+								I have a great interest in programming and I enjoy experimenting
+								with different technologies, concepts and programming
+								languages.<br />
+								Factually I'm a results-driven programmer, I strive for clean
+								code and up-to-date knowledge. Thus I am looking for an
+								opportunity to kick-start my career, where I could grow
+								professionally and eventually I would love to become a valuable
+								asset to the growth of a product.<br /><br />
+								I enjoy playing Chess and listening to oldschool rap/grime
+								<a href="" class="whoTextSpan">
+									( If you fancy hiring by music taste ). </a
+								><br />
+								At the moment as a form of relaxation I enjoy working on my
+								JavaScript clicker-RPG game and I plan on sticking with the
+								project for quite some time.
+							</p>
+						</div>
+							<div class="whoCardButton">
+								<a class="cardButton">See more!</a>
+							</div>
+						</div>
+					</div>
+          <div class="whoCardSecondaryWrapped">
+            <div class="whoCardSecondary">
+              <p class="whoCardSecondaryHeader">Software Skills</p>
+              <div class="whoCardImgWrapper">
+                <div class="whoRowWrapper">
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/html.svg"
+                      alt="HTML"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">HTML</p>
+                  </div>
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/js.svg"
+                      alt="JavaScript"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">JavaScript</p>
+                  </div>
+                  <div class="whoItem">
+                    <img src="./assets/images/css.svg" alt="CSS" class="whoSVG" />
+                    <p class="whoItemTitle">CSS</p>
+                  </div>
+                </div>
+                <div class="whoRowWrapper">
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/three.svg"
+                      alt="ThreeJs"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">ThreeJs</p>
+                  </div>
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/wordpress.svg"
+                      alt="WordPress"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">WordPress</p>
+                  </div>
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/vue.svg"
+                      alt="VueJs"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">VueJs</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="whoCardSecondary">
+              <p class="whoCardSecondaryHeader">Interests</p>
+              <div class="whoCardImgWrapper">
+                <div class="whoRowWrapper">
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/chess.svg"
+                      alt="Chess"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">Chess</p>
+                  </div>
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/gaming.svg"
+                      alt="Gaming"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">Gaming</p>
+                  </div>
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/politics.svg"
+                      alt="Politics"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">Politics</p>
+                  </div>
+                </div>
+                <div class="whoRowWrapper">
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/music.svg"
+                      alt="Music"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">Music</p>
+                  </div>
+                  <div class="whoItem why">
+                    <img
+                      src="./assets/images/unity.svg"
+                      alt="GameDev"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">GameDev</p>
+                  </div>
+                  <div class="whoItem">
+                    <img
+                      src="./assets/images/book.svg"
+                      alt="Reading"
+                      class="whoSVG"
+                    />
+                    <p class="whoItemTitle">Reading</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+				</div>
+				<div class="sectionHelper">
+					<img
+						src="./assets/images/scroll2.svg"
+						alt="Scroll"
+						class="heroScroll"
+					/>
+				</div>
+			</section>
+
+			<div class="spacing"></div>
+
+			<section class="contact" id="contact">
+				<div class="sectionHeaderWrapper">
+					<h3 class="sectionHeader sectionHeaderContact" id="contact"></h3>
+				</div>
+				<div class="contactCards">
+					<div class="contactCard">
+						<p class="contactHeader">Thank you for your time!</p>
+						<p class="contactP">
+							Feedback is much appreciated. If you found something buggy or
+							something that's bothering you please let me know since I am
+							continuously looking to grow as a developer.
+						</p>
+						<p class="contactSubheader">You can also find me on:</p>
+            <div class="contactSocials">
+              <a class="socialsAnchor" href="https://www.linkedin.com/in/mihai-alexandru-vistran-b2979a225/">
+                <img
+                src="./assets/images/linkedin.svg"
+                alt="LinkedIn"
+                class="footerImg"
+                />
+              </a>
+              <a class="socialsAnchor" href="https://github.com/Xernaxe">
+                <img
+                src="./assets/images/github.svg"
+                alt="GitHub"
+                class="footerImg"
+                />
+              </a>
+              <a class="socialsAnchor" href="">
+                <img
+                src="./assets/images/twitter.svg"
+                alt="Twitter"
+                class="footerImg"
+                />
+              </a>
+            </div>
+					</div>
+					<div class="contactForm">
+						<form>
+							<div class="contactFormInWrapper">
+								<label for="Name">Name</label>
+								<input
+									type="text"
+									placeholder="Your name here..."
+									class="contactInput"
+									name="name"
+									autocomplete="off"
+								/>
+							</div>
+							<div class="contactFormInWrapper">
+								<label for="Email">Email</label>
+								<input
+									type="email"
+									placeholder="your@email.here"
+									class="contactInput"
+									name="name"
+									autocomplete="off"
+								/>
+							</div>
+							<div class="contactFormInWrapper">
+								<label for="Message">Message</label>
+								<textarea
+									placeholder="Your message here"
+									class="contactInput"
+									name="name"
+									autocomplete="off"
+								></textarea>
+							</div>
+							<input class="formButton" type="button" value="Submit" />
+						</form>
+					</div>
+				</div>
+        <footer class="footerMobile">
+          <a class="footerLogo" href="">
+						<p class="footerLogoKey">V</p>
+						<p class="footerLogoKey">M</p>
+						<p class="footerLogoKey">A</p>
+					</a>
+          <div class="contactSocials">
+            <a class="socialsAnchor" href="https://www.linkedin.com/in/mihai-alexandru-vistran-b2979a225/">
+              <img
+              src="./assets/images/linkedin.svg"
+              alt="LinkedIn"
+              class="footerImg"
+              />
+            </a>
+            <a class="socialsAnchor" href="https://github.com/Xernaxe">
+              <img
+              src="./assets/images/github.svg"
+              alt="GitHub"
+              class="footerImg"
+              />
+            </a>
+            <a class="socialsAnchor" href="">
+              <img
+              src="./assets/images/twitter.svg"
+              alt="Twitter"
+              class="footerImg"
+              />
+            </a>
+          </div>
+
+          <nav class="footerNav">
+            <ul class="footerUl">
+              <div class="footerLiWrapper">
+                <li class="footerLi"><a href="./index.html">Home</a></li>
+                <li class="footerLi"><a href="#work">Case Studies</a></li>
+                <li class="footerLi"><a href="#who">Who am I</a></li>
+              </div>
+              <div class="footerLiWrapper">
+                <li class="footerLi"><a href="#contact">Contact</a></li>
+                <li class="footerLi"><a href="./index.html">My Playground</a></li>
+              </div>
+            </ul>
+          </nav>
+        </footer>
+        <footer class="footerDesktop">
+					<a class="footerLogo" href="">
+						<p class="footerLogoKey">V</p>
+						<p class="footerLogoKey">M</p>
+						<p class="footerLogoKey">A</p>
+					</a>
+          <div class="footerSocialsWrapper">
+            <div class="footerLine"></div>
+            <div class="contactSocials">
+              <a class="socialsAnchor" href="https://www.linkedin.com/in/mihai-alexandru-vistran-b2979a225/">
+                <img
+                src="./assets/images/linkedin.svg"
+                alt="LinkedIn"
+                class="footerImg"
+                />
+              </a>
+              <a class="socialsAnchor" href="https://github.com/Xernaxe">
+                <img
+                src="./assets/images/github.svg"
+                alt="GitHub"
+                class="footerImg"
+                />
+              </a>
+              <a class="socialsAnchor" href="">
+                <img
+                src="./assets/images/twitter.svg"
+                alt="Twitter"
+                class="footerImg"
+                />
+              </a>
+            </div>
+          </div>
+					<div class="footerWrapper">
+						<nav class="footerNav">
+							<ul class="footerUl">
+								<li class="footerLi"><a href="./index.html">Home</a></li>
+								<li class="footerLi"><a href="#work">Previous Work</a></li>
+								<li class="footerLi"><a href="#who">Who am I</a></li>
+								<li class="footerLi"><a href="#contact">Contact</a></li>
+								<li class="footerLi"><a href="./index.html">Playground</a></li>
+							</ul>
+						</nav>
+					</div>
+				</footer>
+			</section>
+		</main>
+	</body>
+</html>
