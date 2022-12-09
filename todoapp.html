@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./assets/stylesheet2.css" />
+		<link rel="stylesheet" href="./assets/stylesheet.css" />
 		<script src="./assets/app.js" defer></script>
 		<title>To-Do App - VMA Dev</title>
 	</head>
@@ -70,98 +70,65 @@
       </div>
     </header>
 		<main>
-			<div class="sectionHeaderWrapper projectHeader">
-				<h3 class="sectionHeader sectionHeaderWork" id="who">
-					To-Do App
-				</h3>
+			<div class="projectNav">
+				<li class="projectNavLI"><a class="projectNavA" href="./index.html">Home </a></li>
+				<p>></p>
+				<li class="projectNavLI"><a class="projectNavA" href="./index.html#Work"> Case Studies </a></li>
+				<p>></p>
+				<li class="projectNavLI"><a class="projectNavA" href="./todoapp.html"> To-Do App</a></li>
 			</div>
-			<section class="projectSection">
-				<div class="projectWrapper">
-					<img
-						class="projectImg"
-						src="./assets/images/project3_1.png"
-						alt="Photo of website"
-					/>
-					<div class="projectCards">
-						<div class="projectCard">
-							<div class="projectCardTop">
-								<p class="cardHeader">Project Description</p>
-							</div>
-							<div class="projectCardBody">
-								<p class="projectP">
-									The project is a task management app which purpose is to help
-									you stay organized and manage tasks. The To-do App works with
-									authenthication and you can have your tasks saved on your
-									personal account.
-								</p>
-								<div class="cardButtons">
-									<a class="cardButton">GitHub</a>
-									<a class="cardButton">Demo</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="projectSpacing"></div>
-				<div class="projectWrapper pcwrapperleft">
-					<div class="projectCards">
-						<div class="projectCard pcleft">
-							<div class="projectCardTop">
-								<p class="cardHeader">Tech Stack</p>
-							</div>
-							<div class="projectCardBody">
-								<p class="projectP">
-									We had to come up with a solution that would solve the
-									following problems:
-								</p>
-								<ul class="projectUl">
-									<li class="projectLi">Authentication</li>
-									<li class="projectLi">Security</li>
-									<li class="projectLi">Database</li>
-									<li class="projectLi">Backend</li>
+			<div class="projectWrapper">
+				<div class="projectRow">
+					<div class="projectDesc">
+						<p class="projectType">Web Development</p>
+						<h1 class="projectH">To Do App</h1>
+						<p class="projectP">The project is a task management app which purpose
+							is to help you stay organized and manage tasks. The 
+							To-do App works with authenthication and you can 
+							have your tasks saved on your personal account.</p>
+							<div class="workCardTechWrapper">
+								<ul class="workCardUL">
+									<li class="workCardLI workCardLI1">HTML</li>
+									<li class="workCardLI workCardLI1">CSS</li>
+									<li class="workCardLI workCardLI1">JavaScript</li>
+									<li class="workCardLI workCardLI1">SQL</li>
+									<li class="workCardLI workCardLI1">Express</li>
+									<li class="workCardLI workCardLI1">AWS</li>
 								</ul>
 							</div>
-						</div>
 					</div>
-					<img
-						class="projectImg"
-						src="./assets//images/project3_2.png"
-						alt="Photo of website"
-					/>
+					<img class="projectImg" src="./assets/images/project3_1.png" alt="Image1">
 				</div>
-				<div class="projectSpacing"></div>
-				<div class="projectWrapper">
-					<img
-						class="projectImg"
-						src="./assets/images/project3_3.png"
-						alt="Photo of website"
-					/>
-					<div class="projectCards">
-						<div class="projectCard">
-							<div class="projectCardTop">
-								<p class="cardHeader">Implementation</p>
-							</div>
-							<div class="projectCardBody">
-								<p class="projectP">
-									We have developed the application using the following stack:
-								</p>
-								<ul class="projectUl">
-									<li class="projectLi">ExpressJs</li>
-									<li class="projectLi">JavaScript</li>
-									<li class="projectLi">SQL</li>
-									<li class="projectLi">Jest</li>
-									<li class="projectLi">AWS deployment</li>
-								</ul>
-								<p class="projectP">
-									The backend was developed using Express, JWT, BCrypt for
-									password hashing.
-								</p>
-							</div>
-						</div>
+				<div class="projectRow">
+					<div class="projectDesc">
+						<p class="projectP">
+							We had to come up with a solution that would solve the following problems:
+							<ul class="">
+							<li>Authentication</li>
+							<li>Security</li>
+							<li>Database</li>
+							<li>Backend</li>
+						</ul>
+						</p>
 					</div>
+					<img class="projectImg" src="./assets/images/project3_2.png" alt="Image2">
 				</div>
-			</section>
+				<div class="projectRow">
+					<div class="projectDesc">
+						<p class="projectP">We have developed the application using the following stack:
+							<ul>
+								<li>ExpressJs</li>
+								<li>JavaScript</li>
+								<li>SQL</li>
+								<li>Jest</li>
+								<li>AWS deployment</li>
+								<li>The backend was developed using Express, JWT, BCrypt for password hashing.</li>
+							</ul>
+						</p>
+					</div>
+					<img class="projectImg" src="./assets/images/project3_3.png" alt="Image3">
+				</div>
+			</div>
 		</main>
     <footer class="footerMobile">
       <a class="footerLogo" href="">

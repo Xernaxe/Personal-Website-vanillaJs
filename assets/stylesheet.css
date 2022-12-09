@@ -32,7 +32,7 @@
 	/* overflow: hidden; */
 }
 body {
-	background-color: #020204;
+	background-color: #060606;
 }
 
 /* HEADER */
@@ -62,8 +62,8 @@ header {
 	position: sticky;
 }
 
-.navDesktop{
-    display: none;
+.navDesktop {
+	display: none;
 }
 .navLogo {
 	display: flex;
@@ -96,6 +96,15 @@ nav ul li a:hover {
 	height: 2.5px;
 }
 
+.spacing {
+	height: 250px;
+}
+.hero {
+	height: 100vh;
+	/* background: rgb(6,6,6);
+background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(19,32,57,1) 100%); */
+}
+
 .navMobileBurgerMenu {
 	display: flex;
 	flex-direction: column;
@@ -103,7 +112,7 @@ nav ul li a:hover {
 	margin-right: 30px;
 }
 
-.whoP{
+.whoP {
 	line-height: 23px;
 }
 
@@ -148,16 +157,16 @@ nav ul li a:hover {
 }
 
 .displayNone {
-	display: none;
+	display: none !important;
 }
 
-a{
+a {
 	cursor: pointer;
 }
 
 .socialsAnchor {
-    text-decoration: none;
-    margin: 0!important;
+	text-decoration: none;
+	margin: 0 !important;
 }
 
 /* HERO */
@@ -193,17 +202,21 @@ a{
 	flex-direction: column;
 	margin-top: 40px;
 	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-40%, -50%);
 }
 
 .heroHeader {
 	font-size: 25px;
-    font-weight: 600;
+	font-weight: 600;
 	color: var(--blueText);
 	margin-bottom: 5px;
 }
 
-.heroHeaderWrapper{
-    display: flex;
+.heroHeaderWrapper {
+	display: flex;
 }
 
 .heroSubHeader {
@@ -211,17 +224,18 @@ a{
 	font-weight: 500;
 }
 
-.canvasWrapper {
+/* .canvasWrapper {
 	display: flex;
 	justify-content: center;
 	margin-top: 30px;
+} */
+.heroText {
 }
-
-canvas {
+/* canvas {
 	width: 200px;
 	height: 250px;
 	background-color: white;
-}
+} */
 
 .heroHelper {
 	display: flex;
@@ -243,10 +257,6 @@ canvas {
 	justify-content: center;
 }
 
-.spacing {
-	height: 250px;
-}
-
 .sectionHelper {
 	display: flex;
 	justify-content: center;
@@ -254,13 +264,36 @@ canvas {
 /* WORK SECTION */
 
 .workCard {
-	width: 265px;
-	margin: 25px 0;
+	height: 250px;
+	background-color: #0f1117;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 275px;
+	margin: 20px 0;
+	padding: 20px 0;
+	position: relative;
+	cursor: pointer;
+}
+.line {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: #df850f;
+	top: 0px;
+}
+
+.workCardLI {
+	padding: 1px 10px;
+	color: #df850f;
+	border: 1px solid #df850f;
+	border-radius: 10px;
+	font-size: 15px;
 }
 
 .workCardP {
-	text-align: left !important;
-	margin: 6px 0;
+	text-align: center;
 	width: 95%;
 }
 
@@ -271,29 +304,55 @@ canvas {
 	align-items: center;
 }
 
-.workCardTop {
-	height: 45px;
-	width: auto;
-	border-radius: 15px 15px 0 0;
-	background-color: var(--fontWhite);
+.workCardUL {
 	display: flex;
+	list-style: none;
+	gap: 10px;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
 }
 
-.workCardBody {
-	height: 400px;
-	border-radius: 0 0 15px 15px;
-	background-color: var(--boxBg);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+.workCardTechWrapper {
+	max-width: 95%;
+}
+
+.line1 {
+	background-color: #d20fdf;
+}
+.cardHeader1 {
+	color: #d20fdf !important;
+}
+.workCardLI1 {
+	color: #d20fdf !important;
+	border: 1px solid #d20fdf !important;
+}
+
+.line2 {
+	background-color: #5bdf0f;
+}
+.cardHeader2 {
+	color: #5bdf0f !important;
+}
+.workCardLI2 {
+	color: #5bdf0f !important;
+	border: 1px solid #5bdf0f !important;
+}
+
+.line3 {
+	background-color: #0fd9df;
+}
+.cardHeader3 {
+	color: #0fd9df !important;
+}
+.workCardLI3 {
+	color: #0fd9df !important;
+	border: 1px solid #0fd9df !important;
 }
 
 .cardHeader {
-	color: var(--fontBlack);
-	font-size: 22px;
+	color: #df850f;
+	font-size: 18px;
+	text-align: center;
 	font-weight: 600;
 }
 
@@ -342,29 +401,66 @@ canvas {
 	margin: 5px 10px;
 }
 
-.cardP {
-	text-align: center;
-	margin-top: 10px;
-}
-
 /* WHO */
 
-.whoCardTop {
-	height: 45px;
-	width: inherit;
-	border-radius: 15px 15px 0 0;
-	background-color: var(--fontWhite);
+.whoCardHeader {
+	color: #bcbcbc;
+	text-align: center;
+	font-size: 30px;
+}
+
+.whoLine {
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(0.25turn, #a9650f, #9f0dab, #5bdf0f, #0ec8cd);
+	top: 0px;
+}
+
+.hexagon {
+	width: 60px;
+	height: 66px;
+}
+
+.whoCardRow {
 	display: flex;
+	width: 90%;
+}
+.whoCardSkillP {
+	text-align: center;
+	transform: translateY(-10px);
+}
+.whoCardSkills {
+	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 }
 
 .whoCard {
+	height: 375px;
+	background-color: #0f1117;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 280px;
+	margin: 20px 0;
+	padding: 20px 0;
+	position: relative;
+}
+.whoCard:nth-child(2),
+.whoCard:nth-child(3) {
+	height: 300px;
+}
+
+.whoCardSkill {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 25px 0;
-	width: 280px;
-	transition: width 0.8s, height 0.8s !important;
+}
+.whoCardSkillImg {
+	width: 80%;
 }
 .whoTextSpan {
 	color: #497c90;
@@ -372,23 +468,32 @@ canvas {
 	font-weight: bold;
 }
 
-.whoCardTextWrapper,
-.whoCardTextWrapperClicked {
+.whoTextWrapper,
+.whoTextWrapperClicked {
 	opacity: 1;
 	transition: opacity 0.5s;
 }
 
-.whoCardTextWrapperOpacity {
+.whoTextWrapperOpacity {
 	opacity: 0;
 	transition: opacity 0.5s;
 }
 
 .whoCardAfter {
-	width: 320px;
-	height: 600px;
-	transition: 0.8s;
+	width: 100%;
+	height: 600px !important;
+	transition: 0.8s !important;
+}
+.whoTextWrapperClicked {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10px;
 }
 
+.whoCardPAfter {
+	width: 95%;
+}
 .whoCards {
 	display: flex;
 	flex-direction: column;
@@ -396,14 +501,6 @@ canvas {
 }
 
 .whoCardBody {
-	width: inherit;
-	height: inherit;
-	background-color: var(--boxBg);
-	border-radius: 0 0 15px 15px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	transition: height 0.8s;
 }
 
 .whoP {
@@ -411,28 +508,22 @@ canvas {
 	margin: 6px 0 0 10px;
 }
 
-.whoCardHeader {
-	color: var(--fontBlack);
-	font-size: 25px;
-	font-weight: 600;
-	margin-left: 10px;
-}
-
-.whoCardLi {
-	list-style-type: none;
-	font-size: 16px;
-	margin: 6px 5px;
+.whoCardLI {
+	list-style-type: disc;
+	font-size: 15px;
+	margin: 6px 0px 6px 20px;
 }
 
 .whoCardUL {
-	margin: 10px 0;
+	margin: 20px 0;
 }
 
 .whoCardButton {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 25px 0;
+	padding: 5px 30px;
+	background-color: transparent;
+	border: 1px solid #bcbcbc;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .whoCardSecondary {
@@ -474,33 +565,44 @@ canvas {
 
 /* CONTACT */
 
-.contactCards {
+.contact {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
+.contactCards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 275px;
+	background-color: #0f1117;
+	margin: 25px 0;
+	position: relative;
+	padding: 25px 0;
+}
+
 .contactCard {
-	height: 290px;
-	width: 320px;
-	background-color: var(--boxBg);
-	border-radius: 15px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin: 25px 0;
 }
 
 .contactHeader {
 	font-size: 20px;
 	text-align: center;
-	margin: 20px 0 10px 0;
+	margin-bottom: 20px;
 }
 
 .contactP {
 	width: 90%;
 	margin: 0 0 20px 0;
 	font-size: 16px;
+}
+
+.contactH {
+	margin-bottom: 20px;
+	font-size: 30px;
 }
 
 .contactSubheader {
@@ -518,13 +620,8 @@ canvas {
 }
 
 .contactForm {
-	width: 290px;
-	height: 410px;
-	background-color: var(--boxBg);
-	border-radius: 15px;
 	display: flex;
 	justify-content: center;
-	margin: 25px 0;
 }
 
 .contactFormInWrapper {
@@ -535,19 +632,19 @@ canvas {
 input {
 	width: 250px;
 	height: 30px;
-	border-radius: 15px;
-	background: var(--fontWhite);
-	color: var(--fontBlack);
+	background: rgba(25, 29, 38, 0.5);
+	color: #312f2f;
 	padding-left: 10px;
 	font-size: 17px;
 	border: none;
 }
 
 input[type='button'] {
-	width: 160px;
-	height: 30px;
-	border-radius: 15px;
-	color: var(--fontBlack);
+	width: 120px;
+	height: 40px;
+	border-radius: 5px;
+	color: #bcbcbc;
+	border: 1px solid #bcbcbc;
 	font-size: 20px;
 	margin-top: 25px;
 	padding-left: 0;
@@ -562,13 +659,11 @@ textarea {
 	font-size: 17px;
 	border: none;
 	resize: none;
-	border-radius: 15px;
-	background: var(--fontWhite);
-	color: var(--fontBlack);
+	background: rgba(25, 29, 38, 0.5);
+	color: #312f2f;
 }
 
 label {
-	margin: 12px 0 0 10px;
 	font-size: 20px;
 }
 
@@ -576,6 +671,7 @@ form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 15px;
 }
 
 /* FOOTER */
@@ -585,26 +681,26 @@ footer {
 	align-items: center;
 	flex-direction: column;
 	justify-content: space-evenly;
-	background-color: var(--boxBg);
+	background-color: rgb(15, 17, 23);
 }
 
-.footerDesktop{
-    justify-content: space-between;
-    display: none;
+.footerDesktop {
+	justify-content: space-between;
+	display: none;
 }
 
 .footerDesktop a {
-    margin-left: 30px
+	margin-left: 30px;
 }
 .footerDesktop .footerWrapper {
-    margin-right: 30px
+	margin-right: 30px;
 }
 
-.footerWrapper{
-    display: flex;
+.footerWrapper {
+	display: flex;
 }
 
-.footerLine{
+.footerLine {
 	width: 0.5px;
 	margin-right: 20px;
 	background-color: var(--fontWhite);
@@ -615,10 +711,10 @@ footer {
 	text-decoration: none;
 }
 
-.footerImg{
-    width: 30px;
+.footerImg {
+	width: 30px;
 	height: 30px;
-    margin: 0 5px;
+	margin: 0 5px;
 }
 
 .footerLogoKey {
@@ -635,7 +731,7 @@ footer {
 .footerLi a {
 	text-decoration: none;
 	margin: 2px 10px;
-    color: #818181;
+	color: #818181;
 }
 
 .footerLiWrapper {
@@ -704,71 +800,49 @@ footer {
 	margin-left: -120px;
 }
 
+.who,
+.work,
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 50px;
+}
+
 @media screen and (min-width: 768px) {
 	.hero,
 	.who,
 	.work,
-	.contact,
-	.spacing {
-		height: calc(100vh - 45px);
+	.contact {
 		position: relative;
-        display: flex;
-    flex-direction: column;
-    justify-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	.navMobile {
 		display: none;
 	}
 
-	.whoCardHeader{
+	.whoCardHeader {
 		font-size: 28px;
-	font-weight: 600;
+		font-weight: 600;
 	}
 
-    .contact {
-        height: calc(100vh - 60px);
-    }
+	.workCards,
+	.whoCards {
+		padding-bottom: 40px;
+	}
 
-    .workCards, .whoCards{
-        padding-bottom: 40px;
-    }
+	.footerDesktop {
+		display: flex;
+		height: 60px;
+		flex-direction: row;
+		width: 100vw;
+	}
 
-    main {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
-        height: 100vh;
-        scroll-padding-top: 35px;
-        /* scroll-behavior: smooth; */
-    }
-    section {
-        scroll-snap-align: start;
-        height: 100vh;
-    }
-    
-    .spacing {
-        height: 100vh;
-    }
-
-    /* footer{
-        height: 70px;
-        flex-direction: row;
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
-    } */
-
-    .footerDesktop{
-        display: flex;
-        height: 60px;
-        flex-direction: row;
-        position: absolute;
-        bottom: 0;
-        width: 100vw;
-    }
-
-    .footerMobile{
-        display: none;
-    }
+	.footerMobile {
+		display: none;
+	}
 
 	.navDesktop {
 		display: flex;
@@ -779,28 +853,27 @@ footer {
 
 	.navDesktopUl {
 		display: flex;
-        list-style: none;
-        margin-right: 30px;
+		list-style: none;
+		margin-right: 30px;
 	}
 
-    .navDesktopLi a {
-        text-decoration: none;
-        margin: 0 10px;
-        color: #818181;
-    }
+	.navDesktopLi a {
+		text-decoration: none;
+		margin: 0 10px;
+		color: #818181;
+	}
 
-    
 	.canvasWrapper {
-        margin-top: 0;
+		margin-top: 0;
 	}
 
 	.heroWrapper {
 		display: flex;
 		justify-content: center;
 	}
-    
+
 	.heroHelper {
-        margin: 0;
+		margin: 0;
 		position: absolute;
 		bottom: 40px;
 		left: 0;
@@ -808,241 +881,344 @@ footer {
 		margin: auto;
 	}
 
-    .heroText{
-        margin-top: 0;
-        min-width: 405px;
-    }
+	.heroText {
+		margin-top: 0;
+		min-width: 405px;
+	}
 
-    .workCards{
-        flex-direction: row;
-    }
-    
-    .workCard{
-        margin: 0 10px;
-    }
+	.workCards {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
 
-    .sectionHeaderWork, .sectionHeaderWho{
-        margin-bottom: 10px;
-        max-width:fit-content;
-    }
-    
-    .whoCards{
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    .whoCardSecondary{
-        width: 240px;
-        height: 220px;
-    }
-    .whoCardSecondary:nth-child(2){
-        margin: 5px 0 0 5px;
-    }
-    .whoCardSecondary:nth-child(1){
-        margin: 0 0 5px 5px;
-    }
-    
-    .whoItem{
-        margin: 0 10px;
-    }
-    
-    .whoCard{
-        margin: 10px 0 10px 10px;
-        height: 450px;
-				width: 300px;
-        transition: width 0.8s !important;
-    }
-    
-    .whoCardAfter{
-        width: 505px;
-    }
-    
-    .whoCardTextWrapper, .whoCardTextWrapperClicked{
-        height: 320px;
-    }
-    
-    .contactCards{
-        flex-direction: row;
-        justify-content: center;
-    }
+	.workCard {
+		margin: 0;
+	}
 
-    .contactForm{
-        width: 320px;
-        height: 370px;
-        margin-left: 5px;
-    }
-    
-    .contactCard{
-        width: 320px;
-        height: 370px;
-        margin-right:5px
-    }
-    
-    .contactSubheader{
-        margin-top: 50px;
-    }
+	.sectionHeaderWork,
+	.sectionHeaderWho {
+		margin-bottom: 10px;
+		max-width: fit-content;
+	}
 
-    input, textarea{
-        width: 280px;
-    }
+	.whoCards {
+		flex-direction: row;
+		justify-content: center;
+		gap: 5px;
+	}
 
-    .heroText {
-        align-items: initial;
+	.whoCard:nth-child(1) {
+		order: 2;
+		height: 400px;
+		width: 280px;
+	}
+	.whoCard:nth-child(2) {
+		order: 1;
+		height: 280px;
+		width: 240px;
+	}
+	.whoCard:nth-child(3) {
+		order: 3;
+		height: 280px;
+		width: 240px;
+	}
 
-        
-    }
-    
-    .heroHeader {
-        font-size: 30px;
-    }
-    
-    .heroSubHeader {
-        font-size: 25px;
-    }
+	.whoCard {
+		/* margin: 10px 0 10px 10px; */
+		height: 450px;
+		/* width: 250px; */
+		/* transition: width 0.8s !important; */
+	}
 
-    .sectionHelper{
-        margin: 0;
+	.whoCardAfter {
+		width: 505px;
+		height: fit-content !important;
+	}
+
+	.whoCardTextWrapper,
+	.whoCardTextWrapperClicked {
+		height: 320px;
+	}
+
+	.contactCards {
+		/* flex-direction: row; */
+		justify-content: center;
+		width: 90%;
+	}
+	.contactWrapper {
+		display: flex;
+		gap: 10px;
+	}
+
+	.contactForm {
+		width: 320px;
+		height: 370px;
+		margin-left: 5px;
+	}
+
+	.contactCard {
+		width: 320px;
+		height: 370px;
+		margin-right: 5px;
+	}
+
+	.contactSubheader {
+		margin-top: 50px;
+	}
+
+	input,
+	textarea {
+		width: 280px;
+	}
+
+	.heroText {
+		align-items: initial;
+	}
+
+	.heroHeader {
+		font-size: 30px;
+	}
+
+	.heroSubHeader {
+		font-size: 25px;
+	}
+
+	.sectionHelper {
+		margin: 0;
 		position: absolute;
 		bottom: 10px;
 		left: 0;
 		right: 0;
 		margin: auto;
-    }
+	}
 }
 
 @media screen and (min-width: 1024px) {
-    .heroHeader{
-        font-size: 35px
-    }
+	.heroHeader {
+		font-size: 35px;
+	}
 
-    .heroSubHeader {
-        font-size: 30px;
-        line-height: 30px;
-    }
+	.heroSubHeader {
+		font-size: 30px;
+		line-height: 30px;
+	}
 
-    .heroText{
-        min-width: 515px;
-    }
-		.whoCardHeader{
-			font-size: 30px;
-    font-weight: 600;
-		}
+	.heroText {
+		min-width: 515px;
+	}
+	.whoCardHeader {
+		font-size: 30px;
+		font-weight: 600;
+	}
 
-    .sectionHeaderWork, .sectionHeaderWho{
-        margin: 10px 0 20px 0;
-    }
+	.whoCardAfter {
+		width: 550px !important;
+		height: 500px !important;
+		transition: 0.8s !important;
+	}
+	.sectionHeaderWork,
+	.sectionHeaderWho {
+		margin: 10px 0 20px 0;
+	}
 
-    .workCardTop{
-        height: 50px;
-    }
+	.contactCards {
+		width: 70%;
+	}
 
-    .cardHeader{
-        font-size: 25px;
-    }
+	.whoCards {
+		gap: 20px;
+	}
 
-    .workCard:nth-child(1) .workCardBody, .workCard:nth-child(3) .workCardBody{
-        height: 360px;
-    }
+	.cardHeader {
+		font-size: 18px;
+	}
 
-    .workCard:nth-child(1), .workCard:nth-child(3){
-        width: 250px;
-    }
+	.workCard {
+		width: 340px;
+	}
 
-    .whoCard{
-        margin: 0;
-    }
-    
+	.whoCard {
+		margin: 0;
+	}
+	.projectRow {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 50px;
+		align-items: center;
+	}
+	.projectImg {
+		width: 40% !important;
+	}
+	.projectDesc {
+		width: 30% !important;
+	}
+	.projectWrapper {
+		gap: 0 !important;
+	}
+	.projectNav {
+		margin-left: 65px !important;
+	}
 }
 
 @media screen and (min-width: 1440px) {
-    .hero, .who, .work, .contact, .spacing {
-        height: calc(100vh - 58px);
-    }
-    .heroHeader{
-        font-size: 45px
-    }
+	.contactWrapper {
+		gap: 30px;
+	}
 
-		.whoCardAfter{
-			width: 600px;
-		}
+	.whoCardButton {
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
 
-    .heroText{
-        margin-right: calc(20px + 5vw);
+	.workCards {
+		width: 80%;
+	}
+	.heroHeader {
+		font-size: 45px;
+	}
 
-    }
+	.whoCard:nth-child(3) {
+		width: 280px;
+		height: 300px;
+	}
+	.whoCard:nth-child(2) {
+		width: 280px;
+		height: 300px;
+	}
 
-    main{
-        scroll-padding-top: 20px;
-    }
+	.whoCard:nth-child(1) {
+		order: 2;
+		height: 440px;
+		width: 320px;
+	}
 
-    .cardLi{
-        font-size: 18px;
-    }
+	.whoCards {
+		gap: 30px;
+	}
 
+	.contactCards {
+		width: 800px;
+	}
 
-    .workCard{
-        width: 285px;
-    }
-    .heroSubHeader {
-        font-size: 40px;
-    font-weight: 500;
-    line-height: 40px;
-    }
+	.whoCardLI {
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
 
-		.whoCardHeader{
-			font-size: 36px;
-    font-weight: 600;
-		}
-    header{
-        height: 58px;
-    }
+	.whoCardAfter {
+		width: 600px;
+	}
 
-    .navDesktopLi a{
-        font-size: 22px;
-        margin: 0 17.5px;
-    }
+	.heroText {
+		margin-right: calc(20px + 5vw);
+	}
 
-    .navLogoKey{
-        font-size: 35px;
-    }
+	main {
+		scroll-padding-top: 20px;
+	}
 
-    .navLogo{
-        margin-left: 90px;
-    }
+	.cardLi {
+		font-size: 18px;
+	}
 
-    .heroHelper{
-        bottom: 10px;
-    }
+	.workCard {
+		width: 420px;
+	}
+	.heroSubHeader {
+		font-size: 40px;
+		font-weight: 500;
+		line-height: 40px;
+	}
 
-    .sectionHeader {
-        text-align: center;
-        font-size: 30px;
-        font-weight: 300;
-        min-height: 30px;
-    }
+	.whoCardHeader {
+		font-size: 26px;
+		font-weight: 600;
+	}
+	header {
+		height: 58px;
+	}
 
-    .workCardP{
-        width: 92%;
-        font-size: 17px;
-    }
+	.navDesktopLi a {
+		font-size: 22px;
+		margin: 0 17.5px;
+	}
 
-    .sectionHelper{
-        margin: 0;
+	.navLogoKey {
+		font-size: 35px;
+	}
+
+	.navLogo {
+		margin-left: 90px;
+	}
+
+	.heroHelper {
+		bottom: 10px;
+	}
+
+	.sectionHeader {
+		text-align: center;
+		font-size: 30px;
+		font-weight: 300;
+		min-height: 30px;
+	}
+
+	.workCardP {
+		width: 92%;
+		font-size: 17px;
+	}
+
+	.sectionHelper {
+		margin: 0;
 		position: absolute;
 		bottom: 20px;
 		left: 0;
 		right: 0;
 		margin: auto;
-    }
+	}
 
-    .typingAnimation{
-	transform: translateY(13px);
-    }
+	.typingAnimation {
+		transform: translateY(13px);
+	}
 
-    .whoCardSecondary:nth-child(1) {
-        margin: 0 0 10px 15px;
-    }
-    .whoCardSecondary:nth-child(2) {
-        margin: 10px 0 0 15px;
-    }
+	.whoCardSecondary:nth-child(1) {
+		margin: 0 0 10px 15px;
+	}
+	.whoCardSecondary:nth-child(2) {
+		margin: 10px 0 0 15px;
+	}
+}
+
+.projectRow {
+	/* display: flex; */
+}
+.projectNav {
+	margin-top: 90px;
+	display: flex;
+	gap: 5px;
+	margin-left: 20px;
+}
+.projectP {
+	margin: 15px 0;
+}
+.projectDesc {
+	margin-left: 10px;
+}
+.projectNavLI {
+	list-style-type: none;
+}
+.projectType {
+	color: #d20fdf;
+}
+
+.projectImg {
+	margin-top: 40px;
+	width: 100%;
+}
+.projectWrapper {
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+	gap: 100px;
 }

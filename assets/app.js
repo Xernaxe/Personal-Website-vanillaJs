@@ -15,6 +15,26 @@ const workHeader = document.querySelector('.sectionHeaderWork');
 const contactHeader = document.querySelector('.sectionHeaderContact');
 
 
+const workCards = document.querySelectorAll('.workCard');
+
+workCards.forEach(card => {
+	card.addEventListener('click', (e) => {
+		if(card.classList.contains('TT')){
+			location.href = 'tt.html'
+		}
+		if(card.classList.contains('To-Do')){
+			location.href = 'todoapp.html'
+		}
+		if(card.classList.contains('Foodista')){
+			location.href = 'foodista.html'
+		}
+		if(card.classList.contains('React')){
+			location.href = 'reactapp.html'
+		}
+		})
+})
+
+
 function isInViewport(el) {
 	const rect = el.getBoundingClientRect();
 	return (
@@ -22,6 +42,8 @@ function isInViewport(el) {
 	);
 }
 
+
+// https://www.w3schools.com/howto/howto_js_typewriter.asp
 function typingEffect(b, el){
 	if(!el.textContent){
 		let i = 0;
@@ -36,26 +58,26 @@ function typingEffect(b, el){
 		typing1();
 	}
 }
-function navListeners(nav, el, href ){
-	nav.addEventListener('click', (e) => {
-		el.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"})
-		switch (href) {
-			case 'Who':
-					typingEffect('A little bit about me...', whoHeader)
-				break;
+// function navListeners(nav, el, href ){
+// 	nav.addEventListener('click', (e) => {
+// 		el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})
+// 		switch (href) {
+// 			case 'Who':
+// 					typingEffect('A little bit about me...', whoHeader)
+// 				break;
 
-			case 'Work':
-					typingEffect("Let me show you on what I've been working lately...", workHeader)
-				break;
+// 			case 'Work':
+// 					typingEffect("Let me show you on what I've been working lately...", workHeader)
+// 				break;
 
-			case 'Contact':
-					typingEffect("Contact me!", contactHeader)
-				break;
-		}
-		location.href = `#${href}`
-	})
-}
-console.log('a');
+// 			case 'Contact':
+// 					typingEffect("Contact me!", contactHeader)
+// 				break;
+// 		}
+// 		location.href = `#${href}`
+// 	})
+// }
+// console.log('a');
 
 // MOBILE
 
@@ -73,9 +95,9 @@ if(window.innerWidth < 768){
 }
     if(heroHeader){
 
-    navListeners(navWho, whoHeader, 'Who')
-    navListeners(navWork, workHeader, 'Work')
-    navListeners(navContact, contactHeader, 'Contact')
+    // navListeners(navWho, whoHeader, 'Who')
+    // navListeners(navWork, workHeader, 'Work')
+    // navListeners(navContact, contactHeader, 'Contact')
     typingEffect('Mihai-Alexandru Vistran', heroHeader)
   
 
@@ -103,9 +125,8 @@ if(window.innerWidth < 768){
 const whoButton = document.querySelector('.whoCardButton');
 const whoCardBody = document.querySelector('.whoCardBody');
 const whoCard = document.querySelector('.whoCard');
-const whoP = document.querySelector('.whoP');
-const whoTextWrapper = document.querySelector('.whoCardTextWrapper');
-const whoTextWrapperClicked = document.querySelector('.whoCardTextWrapperClicked');
+const whoTextWrapper = document.querySelector('.whoTextWrapper');
+const whoTextWrapperClicked = document.querySelector('.whoTextWrapperClicked');
 
 whoButton.addEventListener('click', function () {
   if(screen.width < 768){
@@ -119,9 +140,11 @@ whoButton.addEventListener('click', function () {
 		whoTextWrapperClicked.classList.toggle('displayNone');
 		whoTextWrapper.classList.toggle('displayNone');
 	}
+	whoButton.classList.toggle('displayNone')
 	setTimeout(function () {
-		whoTextWrapperClicked.classList.toggle('whoCardTextWrapperOpacity');
-		whoTextWrapper.classList.toggle('whoCardTextWrapperOpacity');
+		whoButton.classList.toggle('displayNone')
+		whoTextWrapperClicked.classList.toggle('whoTextWrapperOpacity');
+		whoTextWrapper.classList.toggle('whoTextWrapperOpacity');
 	}, 400);
 });
 }

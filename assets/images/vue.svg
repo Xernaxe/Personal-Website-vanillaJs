@@ -1,8 +1,1 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="body_1" width="37" height="32">
-
-<g transform="matrix(1.0060089 0 0 1.015873 0 0)">
-    <path transform="matrix(1 0 0 1 -0 -4.521)"  d="M29.3 4.521L22.987 4.521L18.387 11.795L14.449 4.521L0 4.521L18.389 36.021L36.778 4.521L29.3 4.521zM4.573 7.148L8.989 7.148L18.389 23.418999L27.781 7.148L32.2 7.148L18.389 30.808L4.573 7.148z" stroke="none" fill="#CACACA" fill-rule="nonzero" />
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="86.729" height="89.218" viewBox="0 0 86.729 89.218"><g transform="translate(0.72 0.748)"><path d="M29.3,4.521H22.987l-4.6,7.274L14.449,4.521H0l18.389,31.5,18.389-31.5ZM4.573,7.148H8.989l9.4,16.271L27.781,7.148H32.2L18.389,30.808,4.573,7.148Z" transform="translate(23.891 28.479)" fill="#41b883"/><path d="M60,46.66V19.993a6.667,6.667,0,0,0-3.333-5.767L33.333.893a6.667,6.667,0,0,0-6.667,0L3.333,14.226A6.667,6.667,0,0,0,0,19.993V46.66a6.667,6.667,0,0,0,3.333,5.767L26.667,65.76a6.667,6.667,0,0,0,6.667,0L56.667,52.427A6.667,6.667,0,0,0,60,46.66Z" transform="translate(33.327) rotate(30)" fill="none" stroke="#41b883" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/></g></svg>
