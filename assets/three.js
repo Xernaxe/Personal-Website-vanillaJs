@@ -19,16 +19,16 @@ const camera = new THREE.PerspectiveCamera(
 );
 let renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 //  https://stackoverflow.com/questions/20899326/how-do-i-stop-effectcomposer-from-destroying-my-transparent-background
-var width = window.innerWidth || 1; 
-var height = window.innerHeight || 1;
-const parameters = {
-	minFilter: THREE.LinearFilter,
-	magFilter: THREE.LinearFilter,
-	format: THREE.RGBAFormat,
-	stencilBuffer: !1
-};
+// var width = window.innerWidth || 1; 
+// var height = window.innerHeight || 1;
+// const parameters = {
+// 	minFilter: THREE.LinearFilter,
+// 	magFilter: THREE.LinearFilter,
+// 	format: THREE.RGBAFormat,
+// 	stencilBuffer: !1
+// };
 
-var renderTarget = new THREE.WebGLRenderTarget( width, height, parameters );
+// var renderTarget = new THREE.WebGLRenderTarget( width, height, parameters );
 // end of borrowed code
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -38,7 +38,7 @@ canvasWrapper.appendChild(renderer.domElement);
 
 const renderScene = new RenderPass(scene, camera);
 // renderer.autoClear=false;
-const composer = new EffectComposer(renderer, renderTarget);
+const composer = new EffectComposer(renderer);
 composer.addPass(renderScene);
 
 let bloomPass = new UnrealBloomPass(
@@ -59,7 +59,7 @@ const material = new THREE.MeshPhongMaterial({
 	// emissive: 0x088ffff,
 });
 
-const bulbGeometry = new THREE.SphereGeometry(0.2, 32, 32);
+const dotGeometry = new THREE.SphereGeometry(0.2, 32, 32);
 let sun = new THREE.PointLight(0xf00230, 0.2, 100, 2);
 let moon = new THREE.PointLight(0x0249ba, 0.2, 100, 2);
 
@@ -73,9 +73,8 @@ let moonMat = new THREE.MeshPhongMaterial({
 	emissiveIntensity: 1,
 	color: 0x0000ff,
 });
-sun.add(new THREE.Mesh(bulbGeometry, sunMat));
-moon.add(new THREE.Mesh(bulbGeometry, moonMat));
-// bulbLight.castShadow = true;
+sun.add(new THREE.Mesh(dotGeometry, sunMat));
+moon.add(new THREE.Mesh(dotGeometry, moonMat));
 
 const cube = new THREE.Mesh(geometry, material.clone());
 scene.add(cube);
@@ -108,7 +107,7 @@ function animate() {
 	cube.rotation.z += 0.002 + (mouseY * 0.00002);
 	cube.rotation.y += 0.0005;
 	newCube.rotation.x += 0.001;
-	composer.render(); //background black
+	composer.render(); //background black ??????????????????????????????????
 	// renderer.render(scene, camera); //background transparent
 }
 

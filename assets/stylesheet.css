@@ -119,12 +119,13 @@ background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(19,32,57,1) 100%); */
 .navActive {
 	width: 300px;
 	height: 450px;
-	background-color: var(--fontWhite);
+	background-color: #0f1117;
 	z-index: 100 !important;
 	position: absolute;
 
 	right: 0;
-	border-radius: 50px 0 0px 50px;
+	/* border-radius: 50px 0 0px 50px; */
+	
 	display: none;
 }
 
@@ -142,7 +143,7 @@ background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(19,32,57,1) 100%); */
 }
 
 .navActiveLi a {
-	color: var(--fontBlack);
+	color: #bcbcbc;
 	text-decoration: none;
 	font-size: 20px;
 }
@@ -448,6 +449,7 @@ a {
 	margin: 20px 0;
 	padding: 20px 0;
 	position: relative;
+	transition: width 0.8s, height 0.8s !important;
 }
 .whoCard:nth-child(2),
 .whoCard:nth-child(3) {
