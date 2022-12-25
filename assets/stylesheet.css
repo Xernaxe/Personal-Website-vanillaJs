@@ -1241,11 +1241,49 @@ footer {
 	display: grid;
 	justify-content: center;
 	grid-template-columns: 80px 80px 80px 80px;
-	gap: 10px;
+	gap: 5px;
 }
 
 .cell{
 	width: 80px;
 	height: 80px;
 	background-color: #707070;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
+
+.cellx2{
+	background-color: rgb(110, 110, 11);
+}
+.cellx4{
+	background-color: rgb(77, 110, 11);
+}
+.cellx8{
+	background-color: rgb(65, 110, 11);
+}
+.cellx16{
+	background-color: rgb(11, 110, 57);
+}
+.cellx32{
+	background-color: rgb(11, 100, 110);
+}
+.cellx64{
+	background-color: rgb(11, 52, 110);
+}
+.cellx128{
+	background-color: rgb(36, 11, 110);
+}
+.cellx256{
+	background-color: rgb(79, 11, 110);
+}
+.cellx512{
+	background-color: rgb(110, 11, 87);
+}
+.cellx1024{
+	background-color: rgb(110, 11, 67);
+}
+.cellx2048{
+	background-color: rgb(110, 11, 32);
 }
