@@ -1224,3 +1224,28 @@ footer {
 	margin-top: 30px;
 	gap: 100px;
 }
+
+
+
+/* 2048 game*/
+.playgroundMain{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.game2048{
+	margin-top: 80px;
+	padding: 10px;
+	background-color: #bcbcbc;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 80px 80px 80px 80px;
+	gap: 10px;
+}
+
+.cell{
+	width: 80px;
+	height: 80px;
+	background-color: #707070;
+}
