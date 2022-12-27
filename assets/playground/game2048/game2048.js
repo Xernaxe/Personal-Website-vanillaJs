@@ -5,14 +5,11 @@ let map = [
 	[0, 0, 0, 0],
 ];
 const gameSection = document.querySelector('.game2048');
-const h2 = document.querySelector('.info2048');
+const button = document.querySelector('.game2048Button');
+const score = document.querySelector('.game2048Score');
+const h2 = document.querySelector('.game2048Header');
 
-// let map = [
-// 	[2, 4, 8, 16],
-// 	[16, 8, 4, 2],
-// 	[2, 4, 8, 16],
-// 	[16, 8, 4, 2],
-// ];
+
 
 function generateBoard() {
 	for (let i = 0; i < map.length; i++) {
@@ -33,6 +30,8 @@ function updateBoard() {
 			cell.classList.toggle(`cellx${cell.dataset.value * 2}`);
 		}
 	}
+	score.innerText = calculateScore()
+
 }
 
 function generateStartingTile() {
@@ -108,8 +107,9 @@ function shiftTilesHorizontally(key) {
 		}
 		newMap.push(newArr);
 	}
-	map = newMap;
-	updateBoard();
+
+		map = newMap;
+		updateBoard();
 }
 
 function shiftTilesVertically(key) {
@@ -182,11 +182,21 @@ function unshiftArr(arr) {
 function containsZeros(arr) {
 	return arr.some((row) => row.includes(0));
 }
-const doesNotHave0 = (currentValue) => currentValue != 0;
 
 function generate2StartingTiles() {
 	generateStartingTile();
 	generateStartingTile();
+}
+
+function calculateScore (){
+	let copyMap = [].concat.apply([], map);
+	let filteredMap = copyMap.filter((item) => item != 0)
+	console.log(filteredMap);
+	let score = 0;
+	for (let i = 0; i < filteredMap.length; i++) {
+		score = score + filteredMap[i]
+	}
+	return score
 }
 
 gameLoop();
