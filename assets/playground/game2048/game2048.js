@@ -9,6 +9,17 @@ const button = document.querySelector('.game2048Button');
 const score = document.querySelector('.game2048Score');
 const h2 = document.querySelector('.game2048Header');
 
+button.addEventListener('click', () => {
+	map = [
+		[0, 0, 0, 0],
+		[0, 0, 0, 0],
+		[0, 0, 0, 0],
+		[0, 0, 0, 0],
+	];
+	generate2StartingTiles();
+	updateBoard()
+})
+
 function generateBoard() {
 	for (let i = 0; i < map.length; i++) {
 		for (let j = 0; j < map[i].length; j++) {
