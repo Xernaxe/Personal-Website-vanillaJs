@@ -9,8 +9,6 @@ const button = document.querySelector('.game2048Button');
 const score = document.querySelector('.game2048Score');
 const h2 = document.querySelector('.game2048Header');
 
-
-
 function generateBoard() {
 	for (let i = 0; i < map.length; i++) {
 		for (let j = 0; j < map[i].length; j++) {
@@ -27,11 +25,10 @@ function updateBoard() {
 			cell.dataset.position = `${i} x ${j}`;
 			cell.innerText = map[i][j];
 			cell.className = `cell`;
-			cell.classList.toggle(`cellx${cell.dataset.value * 2}`);
+			cell.classList.toggle(`cellx${cell.dataset.value}`);
 		}
 	}
-	score.innerText = calculateScore()
-
+	score.innerText = calculateScore();
 }
 
 function generateStartingTile() {
@@ -108,8 +105,8 @@ function shiftTilesHorizontally(key) {
 		newMap.push(newArr);
 	}
 
-		map = newMap;
-		updateBoard();
+	map = newMap;
+	updateBoard();
 }
 
 function shiftTilesVertically(key) {
@@ -136,11 +133,11 @@ function shiftTilesVertically(key) {
 						newArr[k] = newArr[k] + newArr[k - 1];
 						newArr[k - 1] = 0;
 						newArr = newArr.filter((item) => item != 0);
-						k--
+						k--;
 					}
 				}
 			}
-			}
+		}
 
 		if (key == 'w') fillArray(newArr);
 		else if (key == 's') unshiftArr(newArr);
@@ -188,15 +185,14 @@ function generate2StartingTiles() {
 	generateStartingTile();
 }
 
-function calculateScore (){
+function calculateScore() {
 	let copyMap = [].concat.apply([], map);
-	let filteredMap = copyMap.filter((item) => item != 0)
-	console.log(filteredMap);
+	let filteredMap = copyMap.filter((item) => item != 0);
 	let score = 0;
 	for (let i = 0; i < filteredMap.length; i++) {
-		score = score + filteredMap[i]
+		score = score + filteredMap[i];
 	}
-	return score
+	return score;
 }
 
 gameLoop();
