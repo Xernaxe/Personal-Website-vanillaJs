@@ -83,7 +83,6 @@ function typingEffect(b, el){
 
 if(window.innerWidth < 768){
   let clicked = false;
-  console.log('asd');
   burgerMenu.addEventListener('click', (e) => {
     clicked = !clicked
       if(!clicked) {
@@ -136,7 +135,9 @@ whoButton.addEventListener('click', function () {
 	if (whoTextWrapper.classList.contains('displayNone')) {
 		whoTextWrapper.classList.toggle('displayNone');
 		whoTextWrapperClicked.classList.toggle('displayNone');
+		whoButton.innerHTML = "See More"
 	} else if (whoTextWrapperClicked.classList.contains('displayNone')) {
+		whoButton.innerHTML = "See Less"
 		whoTextWrapperClicked.classList.toggle('displayNone');
 		whoTextWrapper.classList.toggle('displayNone');
 	}

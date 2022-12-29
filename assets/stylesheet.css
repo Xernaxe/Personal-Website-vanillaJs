@@ -494,7 +494,7 @@ a {
 }
 
 .whoCardPAfter {
-	width: 95%;
+	width: 90%;
 }
 .whoCards {
 	display: flex;
@@ -577,7 +577,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 275px;
+	width: 300px;
 	background-color: #0f1117;
 	margin: 25px 0;
 	position: relative;
@@ -635,10 +635,11 @@ input {
 	width: 250px;
 	height: 30px;
 	background: rgba(25, 29, 38, 0.5);
-	color: #312f2f;
+	color: #bcbcbc;
 	padding-left: 10px;
 	font-size: 17px;
 	border: none;
+	
 }
 
 input[type='button'] {
@@ -1000,6 +1001,12 @@ footer {
 		top: 20%;
 		left: 30%;
 		transform: translate(-20%, -50%);
+	}
+	.heroHeader{
+		font-size: 22px
+	}
+	.spacing{
+		height: 150px;
 	}
 }
 
