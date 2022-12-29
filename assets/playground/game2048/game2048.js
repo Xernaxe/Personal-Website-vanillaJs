@@ -1,3 +1,27 @@
+// playground.html 
+const burgerMenu = document.querySelector('.navMobileBurgerMenu');
+const navActive = document.querySelector('.navActive');
+const bmline2 = document.querySelector('.bmline2');
+
+
+if(window.innerWidth < 768){
+  let clicked = false;
+  console.log('asd');
+  burgerMenu.addEventListener('click', (e) => {
+    clicked = !clicked
+      if(!clicked) {
+        navActive.classList.toggle('display')
+      } else {
+        navActive.classList.toggle('display')
+      }
+    })
+}
+
+
+
+
+
+
 let map = [
 	[0, 0, 0, 0],
 	[0, 0, 0, 0],
