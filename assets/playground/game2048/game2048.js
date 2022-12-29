@@ -2,6 +2,7 @@
 const burgerMenu = document.querySelector('.navMobileBurgerMenu');
 const navActive = document.querySelector('.navActive');
 const bmline2 = document.querySelector('.bmline2');
+const overlay = document.querySelector('.overlay');
 
 
 if(window.innerWidth < 768){
@@ -11,8 +12,10 @@ if(window.innerWidth < 768){
     clicked = !clicked
       if(!clicked) {
         navActive.classList.toggle('display')
+				overlay.classList.toggle('display')
       } else {
-        navActive.classList.toggle('display')
+				overlay.classList.toggle('display')
+				navActive.classList.toggle('display')
       }
     })
 }

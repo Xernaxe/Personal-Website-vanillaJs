@@ -29,7 +29,6 @@
 	font-family: Nunito, sans-serif;
 	color: var(--fontWhite);
 	max-width: 100%;
-	/* overflow: hidden; */
 }
 body {
 	background-color: #060606;
@@ -101,8 +100,6 @@ nav ul li a:hover {
 }
 .hero {
 	height: 100vh;
-	/* background: rgb(6,6,6);
-background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(19,32,57,1) 100%); */
 }
 
 .navMobileBurgerMenu {
@@ -120,17 +117,15 @@ background: linear-gradient(0deg, rgba(6,6,6,1) 0%, rgba(19,32,57,1) 100%); */
 	width: 300px;
 	height: 450px;
 	background-color: #0f1117;
-	z-index: 100 !important;
+	z-index: 901 !important;
 	position: absolute;
-
+	border-radius: 0 0 0 15px;
 	right: 0;
-	/* border-radius: 50px 0 0px 50px; */
-	
 	display: none;
 }
 
 .display {
-	display: block;
+	display: block !important;
 }
 
 .navActiveUl {
@@ -225,19 +220,6 @@ a {
 	font-weight: 500;
 }
 
-/* .canvasWrapper {
-	display: flex;
-	justify-content: center;
-	margin-top: 30px;
-} */
-.heroText {
-}
-/* canvas {
-	width: 200px;
-	height: 250px;
-	background-color: white;
-} */
-
 .heroHelper {
 	display: flex;
 	justify-content: center;
@@ -251,6 +233,7 @@ a {
 	text-align: center;
 	font-weight: 400;
 	max-width: 291px;
+	min-height: 20px;
 }
 
 .sectionHeaderWrapper {
@@ -502,9 +485,6 @@ a {
 	align-items: center;
 }
 
-.whoCardBody {
-}
-
 .whoP {
 	width: 95%;
 	margin: 6px 0 0 10px;
@@ -612,10 +592,6 @@ a {
 	margin: 5px 0 10px 0;
 }
 
-/* .contactSocials{
-    display: flex;
-} */
-
 .contactImg {
 	margin: 0 10px;
 	width: 40px;
@@ -639,7 +615,6 @@ input {
 	padding-left: 10px;
 	font-size: 17px;
 	border: none;
-	
 }
 
 input[type='button'] {
@@ -675,6 +650,15 @@ form {
 	flex-direction: column;
 	align-items: center;
 	gap: 15px;
+}
+
+.overlay {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 900;
+	position: absolute;
+	display: none;
 }
 
 /* FOOTER */
@@ -928,10 +912,7 @@ footer {
 	}
 
 	.whoCard {
-		/* margin: 10px 0 10px 10px; */
 		height: 450px;
-		/* width: 250px; */
-		/* transition: width 0.8s !important; */
 	}
 
 	.whoCardAfter {
@@ -997,16 +978,20 @@ footer {
 	}
 }
 @media screen and (max-width: 426px) {
-	.heroText{
+	.heroText {
 		top: 20%;
 		left: 30%;
 		transform: translate(-20%, -50%);
 	}
-	.heroHeader{
-		font-size: 22px
+	.heroHeader {
+		font-size: 22px;
 	}
-	.spacing{
+	.spacing {
 		height: 150px;
+	}
+
+	.typingAnimation{
+		height: 30px;
 	}
 }
 
@@ -1206,9 +1191,7 @@ footer {
 	}
 }
 
-.projectRow {
-	/* display: flex; */
-}
+
 .projectNav {
 	margin-top: 90px;
 	display: flex;
@@ -1239,11 +1222,8 @@ footer {
 	gap: 100px;
 }
 
-
-
-
 /* 2048 game*/
-.playgroundMain{
+.playgroundMain {
 	margin-top: 100px;
 	display: flex;
 	flex-direction: column;
@@ -1251,28 +1231,30 @@ footer {
 	justify-content: center;
 }
 
-.game2048Left, .game2048ScoreHeader, .game2048Score{
+.game2048Left,
+.game2048ScoreHeader,
+.game2048Score {
 	text-align: center;
 	font-size: 20px;
 	line-height: 35px;
 }
 
-.game2048Left > span{
+.game2048Left > span {
 	font-size: 30px;
 }
 
-.game2048Wrapper{
+.game2048Wrapper {
 	display: flex;
 	align-items: center;
 	gap: 25px;
 }
-.game2048Right{
+.game2048Right {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
-.game2048Button{
+.game2048Button {
 	width: 140px;
 	height: 45px;
 	background-color: transparent;
@@ -1283,14 +1265,14 @@ footer {
 	font-size: 18px;
 }
 
-.game2048InWrapper{
+.game2048InWrapper {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-.game2048{
+.game2048 {
 	margin-top: 20px;
 	padding: 10px;
 	background-color: #bcbcbc;
@@ -1300,7 +1282,7 @@ footer {
 	gap: 5px;
 }
 
-.cell{
+.cell {
 	width: 80px;
 	height: 80px;
 	background-color: #707070;
@@ -1310,36 +1292,36 @@ footer {
 	font-size: 20px;
 }
 
-.cellx2{
+.cellx2 {
 	background-color: rgb(110, 110, 11);
 }
-.cellx4{
+.cellx4 {
 	background-color: rgb(110, 84, 11);
 }
-.cellx8{
+.cellx8 {
 	background-color: rgb(65, 110, 11);
 }
-.cellx16{
+.cellx16 {
 	background-color: rgb(11, 110, 57);
 }
-.cellx32{
+.cellx32 {
 	background-color: rgb(11, 100, 110);
 }
-.cellx64{
+.cellx64 {
 	background-color: rgb(11, 52, 110);
 }
-.cellx128{
+.cellx128 {
 	background-color: rgb(36, 11, 110);
 }
-.cellx256{
+.cellx256 {
 	background-color: rgb(79, 11, 110);
 }
-.cellx512{
+.cellx512 {
 	background-color: rgb(110, 11, 87);
 }
-.cellx1024{
+.cellx1024 {
 	background-color: rgb(110, 11, 67);
 }
-.cellx2048{
+.cellx2048 {
 	background-color: rgb(110, 11, 32);
 }
