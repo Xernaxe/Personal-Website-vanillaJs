@@ -17,6 +17,10 @@ const contactHeader = document.querySelector('.sectionHeaderContact');
 
 const workCards = document.querySelectorAll('.workCard');
 
+const work = document.querySelector('.work');
+const who = document.querySelector('.who');
+const contact = document.querySelector('.contact');
+
 workCards.forEach((card) => {
 	card.addEventListener('click', (e) => {
 		if (card.classList.contains('TT')) {
@@ -89,20 +93,23 @@ if (heroHeader) {
 	typingEffect('Mihai-Alexandru Vistran', heroHeader);
 
 	document.addEventListener(
-		'wheel',
+		'wheel',	
 		function () {
 			setTimeout(() => {
 				if (isInViewport(whoHeader)) {
 					typingEffect('A little bit about me...', whoHeader);
+					// who.classList.add('opacity');
+					// console.log(window.location.hash)
 				}
 				if (isInViewport(workHeader)) {
 					typingEffect(
-						"Let me show you on what I've been working lately...",
-						workHeader
-					);
+						"Let me show you on what I've been working lately...", workHeader);
+					// work.classList.add('opacity');
 				}
 				if (isInViewport(contactHeader)) {
 					typingEffect('Contact me!', contactHeader);
+					// contact.classList.add('opacity');
+
 				}
 			}, 1500);
 		},

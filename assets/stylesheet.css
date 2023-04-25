@@ -724,6 +724,17 @@ footer {
 .footerLiWrapper {
 	display: flex;
 }
+/* 
+.opacity{
+	opacity: 1!important;
+	transform: translateY(0px)!important;
+}
+
+.work, .who, .contact{
+	opacity: 0;
+	transition: transform 0.5s, opacity 0.7s;
+	transform: translateY(100px);
+} */
 
 /* Project page */
 
