@@ -60,7 +60,6 @@ function typingEffect(b, el) {
 }
 // MOBILE
 
-if (window.innerWidth < 768) {
 	let clicked = false;
 	burgerMenu.addEventListener('click', (e) => {
 		clicked = !clicked;
@@ -88,7 +87,6 @@ if (window.innerWidth < 768) {
 			}
 		});
 	});
-}
 if (heroHeader) {
 	typingEffect('Mihai-Alexandru Vistran', heroHeader);
 
